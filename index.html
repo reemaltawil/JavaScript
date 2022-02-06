@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Select Element</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="container">
+            <li class="box" id="box-A">A</li>
+            <li class="box" id="box-B">B</li>
+            <li class="box box-to-select" id="box-C">C</li>
+            <li class="box box-to-select-2" id="box-D">D</li>
+            <li class="box box-to-select" id="box-E">E</li>
+            <li class="box box-to-select-2" id="box-F">F</li>
+            <li class="box box-to-select" id="box-G">G</li>
+            <li class="box box-to-select-2" id="box-H">H</li>
+        </ul>
+    </div>
+
+    <script>
+const box=document.getElementById("box-A");
+box.addEventListener("click", function(event){
+    event.target.style.backgroundColor="white";
+})
+var boxes=document.getElementsByClassName("box-to-select");
+      for (const element of boxes){
+          element.addEventListener("click", function(event){
+            event.target.style.backgroundColor="white";
+            console.log(event,"event");
+          });
+      }
+        for(let i=0; i<boxes.length; i++){
+             boxes[i]
+      }
+        queryFifthBox= document.querySelector("div ul #box-B");
+        queryFifthBox.addEventListener("click", function(event){
+            event.target.style.backgroundColor="black";
+      });
+      const queryBoxes= document.querySelectorAll(".box-to-select-2");
+      for(const element of queryBoxes){
+          element.addEventListener("click", function (event) {
+              event.target.style.backgroundColor="black";
+          });
+      }
+    </script>
+</body>
+</html>
